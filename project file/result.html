@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Result | Poultry Disease Detection{% endblock %}
+{% block content %}
+    <h2>✅ Prediction Result</h2>
+    <p><strong>Disease:</strong> {{ prediction }}</p>
+
+    {% if suggestion %}
+        <p><strong>🩺 Suggestion:</strong> {{ suggestion }}</p>
+    {% endif %}
+
+    <img src="{{ url_for('static', filename='uploads/' ~ image) }}" width="300"><br><br>
+    <a href="/predict"><button>🔁 Diagnose Another</button></a>
+{% endblock %}

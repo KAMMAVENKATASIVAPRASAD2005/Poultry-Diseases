@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Diagnosis | Poultry Disease Detection{% endblock %}
+{% block content %}
+    <h2>🧪 Submit Poultry Image & Symptoms</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Select Poultry Image:</label><br>
+        <input type="file" name="image" required><br><br>
+
+        <label>Observed Symptoms:</label><br>
+        <label><input type="checkbox" name="symptom_lethargy"> Lethargy</label><br>
+        <label><input type="checkbox" name="symptom_diarrhea"> Diarrhea</label><br>
+        <label><input type="checkbox" name="symptom_coughing"> Coughing</label><br>
+        <label><input type="checkbox" name="symptom_sneezing"> Sneezing</label><br>
+        <label><input type="checkbox" name="symptom_loss_of_appetite"> Loss of Appetite</label><br><br>
+
+        <button type="submit">Predict Disease</button>
+    </form>
+{% endblock %}
